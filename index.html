@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Servicios profesionales de construcción y mantenimiento en la Gran Área Metropolitana. Especialistas en cemento, electricidad, techos y soldadura.">
+    <title>Servicios de Construcción y Mantenimiento | GAM Costa Rica</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+    <style>
+        :root {
+            --bs-primary: #1e3a8a;
+            --bs-primary-rgb: 30, 58, 138;
+        }
+        .btn-primary {
+            background-color: #1e3a8a;
+            border-color: #1e3a8a;
+        }
+        .btn-primary:hover {
+            background-color: #486de6;
+            border-color: #486de6;
+        }
+        .btn-outline-primary {
+            color: #1e3a8a;
+            border-color: #1e3a8a;
+        }
+        .btn-outline-primary:hover {
+            background-color: #1e3a8a;
+            border-color: #1e3a8a;
+        }
+        .text-dark-readable {
+            color: #374151 !important;
+        }
+        .nav-link:hover {
+            color: #ffffff !important;
+            opacity: 1 !important;
+        }
+        .footer a:hover {
+            color: #ffffff !important;
+            opacity: 1 !important;
+        }
+        
+        .navbar-toggler {
+            border-color: rgba(255,255,255,0.3);
+        }
+        
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+        
+        /* Carousel Styles */
+        .carousel-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .carousel-wrapper {
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .carousel-slide {
+            min-width: 100%;
+            height: 400px;
+        }
+        
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(30, 58, 138, 0.8);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+        
+        .carousel-btn:hover {
+            background: rgba(30, 58, 138, 1);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .carousel-btn-prev {
+            left: -25px;
+        }
+        
+        .carousel-btn-next {
+            right: -25px;
+        }
+        
+        @media (max-width: 768px) {
+            .carousel-slide {
+                height: 250px;
+            }
+            
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+            
+            .carousel-btn-prev {
+                left: 10px;
+            }
+            
+            .carousel-btn-next {
+                right: 10px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .carousel-slide {
+                height: 200px;
+            }
+            
+            .carousel-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+            
+            .carousel-btn-prev {
+                left: 5px;
+            }
+            
+            .carousel-btn-next {
+                right: 5px;
+            }
+            
+            .navbar-brand span {
+                font-size: 0.9rem;
+            }
+        }
+        
+        .btn-instagram:hover {
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%) !important;
+            border-color: #e1306c !important;
+        }
+    </style>
+    <!-- Boxicons -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+<header class="header navbar navbar-expand-lg bg-dark navbar-sticky border-bottom border-light">
+        <div class="container px-3">
+        <a href="index.html" class="navbar-brand pe-3 text-white">
+            <img src="images/logo.jpg" width="47" alt="Logo Construcción">
+            <span class="text-white">Construcción & Mantenimiento</span>
+            </a>
+        <button class="navbar-toggler border-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link text-light opacity-75 hover-opacity-100" href="services.html">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link text-light opacity-75 hover-opacity-100" href="about.html">Cómo trabajamos</a></li> 
+                </ul>
+            </div>
+        </div>
+    </header>
+
+        <section class="jarallax bg-dark py-xxl-5 position-relative" data-jarallax data-speed="0.4" data-bs-theme="dark">
+        <span class="position-absolute top-0 start-0 w-100 h-100 bg-gradient-dark-translucent"></span>
+        <img src="images/fondo.avif" class="jarallax-img w-100 img-fluid" alt="Hero Background Image" style="object-fit: cover; min-height: 40vh;">
+        <div class="position-relative text-center zindex-5 overflow-hidden pt-4 py-md-5">
+            <div class="container text-center py-xl-5">
+                <div class="row justify-content-center pt-lg-5">
+                    <div class="col-xl-8 col-lg-9 col-md-10 col-11">
+                        <div class="swiper pt-5 pb-4 py-md-5" data-swiper-options='{
+                            "effect": "fade",
+                            "speed": 500,
+                            "autoplay": {
+                                "delay": 5500,
+                                "disableOnInteraction": false
+                            },
+                            "pagination": {
+                                "el": ".swiper-pagination",
+                                "clickable": true
+                            },
+                            "navigation": {
+                                "prevEl": "#hero-prev",
+                                "nextEl": "#hero-next"
+                            }
+                        }'>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <h2 class="display-2 text-white fw-bold animate__animated animate__fadeInDown mb-lg-4" style="animation-delay: 0.5s;">
+                                        Servicios de Construcción y Mantenimiento
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination position-relative d-md-none pt-2 mt-5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container d-flex flex-column flex-sm-row align-items-center justify-content-between position-relative zindex-5 pb-5">
+            <div class="d-flex mb-4 mb-sm-0">
+                <a href="https://www.instagram.com/josephgm99/" class="btn btn-icon btn-secondary btn-instagram rounded-circle me-2" aria-label="Instagram">
+                    <i class="bx bxl-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/josephjoaquin.garciamontero/" class="btn btn-icon btn-secondary btn-facebook rounded-circle me-2" aria-label="Facebook">
+                    <i class="bx bxl-facebook"></i>
+                </a>
+                <a href="https://wa.me/50683216357?text=Consulta%20de%20servicios%20de%20Construcción%20y%20Mantenimiento" class="btn btn-icon btn-secondary btn-whatsapp rounded-circle me-2" aria-label="Whatsapp">
+                    <i class="bx bxl-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container pt-5 mt-2 mt-md-4 mt-lg-5">
+        <div class="row pt-xl-3">
+            <div class="col-md-5 text-center text-md-start pb-5">
+                <h1 class="mb-4">Servicios de Construcción y Mantenimiento</h1>
+                <p class="fs-lg pb-lg-3 mb-4 text-dark-readable">
+                    Somos una empresa especializada en servicios de construcción y mantenimiento en la Gran Área Metropolitana. Ofrecemos soluciones integrales para proyectos residenciales, comerciales e industriales, desde trabajos pequeños hasta grandes construcciones.
+
+                    Nuestros servicios incluyen construcción en cemento, electricidad, techos, soldadura y mantenimiento general. Nos comprometemos a brindar calidad, responsabilidad y atención personalizada en cada proyecto.
+                </p>
+                <a href="about.html" class="btn btn-primary shadow-primary btn-lg">
+                    Más sobre nosotros
+                </a>
+            </div>
+            <div class="col-xl-6 col-md-7 offset-xl-1 pb-4 pb-sm-3 pb-lg-0 mb-4 mb-sm-5 mb-lg-0">
+                <img src="images/mantenimiento.jpg" class="rounded-3 shadow-sm img-fluid" alt="Servicios de construcción y mantenimiento profesional">
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-secondary pb-md-2 pb-lg-5">
+        <div class="d-none d-lg-block" style="margin-top: -60px; padding-top: 60px;"></div>
+        <div class="container pb-4 pt-5">
+            <h2 class="h1 text-center text-md-start mb-lg-4 pt-1 pt-md-4">Servicios</h2>
+            <div class="row align-items-center pb-5 mb-lg-2">
+                <div class="col-md-8 text-center text-md-start">
+                    <p class="fs-lg text-dark-readable mb-md-0">
+                        Ofrecemos servicios integrales de construcción y mantenimiento adaptados a las necesidades de cada cliente. Trabajamos con materiales de calidad y técnicas profesionales para garantizar resultados duraderos y satisfactorios.
+    
+                        Atendemos proyectos residenciales, comerciales e industriales en toda la GAM. Desde reparaciones menores hasta construcciones completas, nuestro equipo cuenta con la experiencia y herramientas necesarias para ejecutar trabajos de excelente calidad.
+                    </p>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center justify-content-md-end">
+                    <a href="services.html" class="btn btn-outline-primary btn-lg">Ver todos los servicios</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="container text-center pb-5 mt-4 mb-4">
+        <h2 class="h1 mb-4">Proyectos Realizados</h2>
+        <div class="carousel-container">
+            <div class="carousel-wrapper">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide">
+                        <img src="images/obraGris.jpg" alt="Obra en construcción">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/electricidad.jpg" alt="Instalación eléctrica">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/enchapar.jpg" alt="Trabajo de enchapado">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/mantenimiento.jpg" alt="Servicios de mantenimiento">
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn carousel-btn-prev" id="prevBtn">
+                <i class="bx bx-chevron-left"></i>
+            </button>
+            <button class="carousel-btn carousel-btn-next" id="nextBtn">
+                <i class="bx bx-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <footer class="footer bg-dark border-top border-light pt-5 pb-4 pb-lg-5">
+        <div class="container pt-lg-4">
+            <div class="row pb-5">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <div class="navbar-brand text-white p-0 me-0 mb-3 mb-lg-4">
+                        <img src="images/logo.jpg" width="47" alt="Logo Construcción">
+                        <span class="text-white">Servicios de Construcción y Mantenimiento</span>
+                    </div>
+                    <p class="text-light opacity-75 mb-4">
+                        Especialistas en construcción y mantenimiento en la Gran Área Metropolitana. Calidad y responsabilidad en cada proyecto.
+                    </p>
+                    <p class="nav d-block fs-xs text-center text-md-start pb-2 pb-lg-0 mb-0">
+                        <span class="text-light opacity-50">&copy; Reservados todos los derechos. Hecho por Joseph García</span>
+                    </p>
+                </div>
+                <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
+                    <div id="footer-links" class="row">
+                        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                            <h6 class="mb-3 text-white">Enlaces</h6>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bx bx-chevron-right text-primary me-2"></i><a href="index.html" class="text-light opacity-75 hover-opacity-100 text-decoration-none fs-sm">Inicio</a></li>
+                                <li class="mb-2"><i class="bx bx-chevron-right text-primary me-2"></i><a href="services.html" class="text-light opacity-75 hover-opacity-100 text-decoration-none fs-sm">Servicios</a></li>
+                                <li class="mb-2"><i class="bx bx-chevron-right text-primary me-2"></i><a href="about.html" class="text-light opacity-75 hover-opacity-100 text-decoration-none fs-sm">Cómo trabajamos</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xl-4 col-lg-5 col-md-6 pt-2 pt-lg-0">
+                            <h6 class="mb-3 text-white">Contacto</h6>
+                            <div class="mb-3">
+                                <i class="bx bx-envelope text-primary me-2"></i><a href="mailto:josephgm99@gmail.com" class="text-light opacity-75 hover-opacity-100 text-decoration-none fs-sm">josephgm99@gmail.com</a>
+                            </div>
+                            <div class="mb-3">
+                                <i class="bx bx-phone text-primary me-2"></i><a href="tel:+50683216357" class="text-light opacity-75 hover-opacity-100 text-decoration-none fs-sm">+506 8321-6357</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+    <script>
+        class ImageCarousel {
+            constructor(trackSelector, prevBtnSelector, nextBtnSelector) {
+                this.track = document.querySelector(trackSelector);
+                this.prevBtn = document.querySelector(prevBtnSelector);
+                this.nextBtn = document.querySelector(nextBtnSelector);
+                this.slides = this.track.querySelectorAll('.carousel-slide');
+                this.currentIndex = 0;
+                
+                this.init();
+            }
+            
+            init() {
+                this.prevBtn.addEventListener('click', () => this.prevSlide());
+                this.nextBtn.addEventListener('click', () => this.nextSlide());
+                
+                let startX = 0;
+                let currentX = 0;
+                
+                this.track.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                });
+                
+                this.track.addEventListener('touchmove', (e) => {
+                    currentX = e.touches[0].clientX;
+                });
+                
+                this.track.addEventListener('touchend', () => {
+                    const diff = startX - currentX;
+                    if (Math.abs(diff) > 50) {
+                        diff > 0 ? this.nextSlide() : this.prevSlide();
+                    }
+                });
+            }
+            
+            updateCarousel() {
+                const translateX = -this.currentIndex * 100;
+                this.track.style.transform = `translateX(${translateX}%)`;
+            }
+            
+            nextSlide() {
+                this.currentIndex = (this.currentIndex + 1) % this.slides.length;
+                this.updateCarousel();
+            }
+            
+            prevSlide() {
+                this.currentIndex = this.currentIndex === 0 ? this.slides.length - 1 : this.currentIndex - 1;
+                this.updateCarousel();
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            if (document.querySelector('#carouselTrack')) {
+                new ImageCarousel('#carouselTrack', '#prevBtn', '#nextBtn');
+            }
+        });
+    </script>
+</body>
+</html>
